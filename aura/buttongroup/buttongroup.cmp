@@ -1,0 +1,8 @@
+<aura:component >
+    <lightning:buttongroup >
+        <lightning:button label="button1" onclick="{! c.getDetail }" />
+        <lightning:button label="button2" />
+        <lightning:button label="button3" />
+    </lightning:buttongroup>
+     	
+</aura:component>

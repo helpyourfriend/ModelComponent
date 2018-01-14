@@ -1,0 +1,42 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+
+	<aura:attribute name ="var1" type="integer" />
+	<aura:attribute name ="var2" type="integer" />
+	<aura:attribute name ="var3" type="String" default="lightgray"/>
+	<aura:attribute name ="result" type="integer" />
+<div class="slds" style="{! 'background-color:'+v.var3+';width:50%'}">
+	<div class="slds-page-header">
+		<h3>
+		     	<b>
+		     		<center>Calculater</center>
+		     	</b>
+		</h3>
+	</div>
+	<br/>
+	<lightning:input name="value1" type="number" label="Enter 1st number" value="{! v.var1 }"/>
+	<lightning:input name="value2" type="number" label="Enter 2nd number" value="{! v.var2 }"/>
+
+	<center>
+		<b style="color:blue">
+			Value entered is: {! v.var1} and {! v.var2}
+		</b>
+	</center>
+	<center>
+		<b style="color:Red">
+			Result is: {! v.result} 
+		</b>
+	</center>
+
+	<lightning:button iconName="utility:add" onclick="{! c.addNumber }"/>
+	<lightning:button iconName="utility:dash" onclick="{! c.substractNumber }"/>
+	<lightning:button iconName="utility:close" onclick="{! c.multiplyNumber }"/>
+
+	<br />
+	<lightning:input name="value3" type="String" label="background color" value="{! v.var3 }"/>
+	<center>
+		<b style="{! 'color:'+v.var3}"> 
+			<h2>color is changed </h2>
+		</b>
+	</center>
+</div>	
+</aura:component>

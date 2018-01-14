@@ -1,0 +1,27 @@
+<aura:component>
+	<aura:attribute name="header" type="string" default="Model Box header"/>
+	<aura:attribute name="buttonName" type="string" default="Ok"/>
+	<div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+        <div class="slds-modal__container">
+          <!--  MODAL BOX HEADER Part Start From Here -->
+          <div class="slds-modal__header">
+         	<lightning:buttonIcon class="slds-modal__close" variant="bare-inverse" title="close" iconName="utility:close" onclick="{! c.closeModel }" />
+          	<h2 class="slds-text-heading--medium"> {! v.header }</h2>
+          </div>
+          <div class="slds-modal__content slds-p-around--medium">
+          	<p><b>Model are used to display the content in a layer above the app.
+          		{! v.body }
+              </b>
+          		}
+            </p>
+            
+         </div>
+          <div class="slds-modal__footer">
+          	<lightning:button label="close" variant="neutral" onclick="{! c.closeModel }"/>
+          	<lightning:button label="{!v.buttonName}" value="{! v.buttonName }" class="slds-button--brand" onclick="{! c.okModel }" />
+          
+          </div>
+      </div>
+  </div>
+		<div class="slds-backdrop slds-backdrop--open"></div>
+</aura:component>

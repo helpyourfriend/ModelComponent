@@ -1,0 +1,9 @@
+<aura:component>
+	<aura:dependency resource="c:dynamicComponentModel" />
+	<lightning:buttonMenu onselect="{!c.performAction }" iconName="utility:add">Action 
+		<lightning:menuItem label="View" value="View" iconName="utility:preview" />
+		<lightning:menuItem label="Edit" value="Edit" iconName="utility:edit" />
+		<lightning:menuItem label="Delete" value="Delete" iconName="utility:Delete"  />
+	</lightning:buttonMenu> 
+	<div aura:id="dynamicComponentGrid" ></div>
+</aura:component>
